@@ -1,0 +1,63 @@
+from .token_type import TokenType
+
+KEYWORDS = {
+    'int': TokenType.INT,
+    'long': TokenType.LONG,
+    'short': TokenType.SHORT,
+    'byte': TokenType.BYTE,
+    'double': TokenType.DOUBLE,
+    'float': TokenType.FLOAT,
+    'boolean': TokenType.BOOLEAN,
+    'char': TokenType.CHAR,
+
+    'if': TokenType.IF,
+    'else': TokenType.ELSE,
+    'switch': TokenType.SWITCH,
+    'case': TokenType.CASE,
+    'default': TokenType.DEFAULT,
+    'break': TokenType.BREAK,
+    'continue': TokenType.CONTINUE,
+    'return': TokenType.RETURN,
+    'while': TokenType.WHILE,
+    'for': TokenType.FOR,
+    'do': TokenType.DO,
+    'true': TokenType.TRUE,
+    'false': TokenType.FALSE,
+
+    'public': TokenType.PUBLIC,
+    'private': TokenType.PRIVATE,
+    'protected': TokenType.PROTECTED,
+
+    'static': TokenType.STATIC,
+    'final': TokenType.FINAL,
+    'abstract': TokenType.ABSTRACT,
+    'synchronized': TokenType.SYNCHRONIZED,
+    'volatile': TokenType.VOLATILE,
+    'transient': TokenType.TRANSIENT,
+
+    'class': TokenType.CLASS,
+    'interface': TokenType.INTERFACE,
+    'extends': TokenType.EXTENDS,
+    'implements': TokenType.IMPLEMENTS,
+    'new': TokenType.NEW,
+    'this': TokenType.THIS,
+    'super': TokenType.SUPER,
+    'instanceof': TokenType.INSTANCEOF,
+    'enum': TokenType.ENUM,
+
+    'try': TokenType.TRY,
+    'catch': TokenType.CATCH,
+    'finally': TokenType.FINALLY,
+    'throw': TokenType.THROW,
+    'throws': TokenType.THROWS,
+    'assert': TokenType.ASSERT,
+
+    'package': TokenType.PACKAGE,
+    'import': TokenType.IMPORT,
+    'exports': TokenType.EXPORTS,
+    'module': TokenType.MODULE,
+    'void': TokenType.VOID,
+    'var': TokenType.VAR,
+    'requires': TokenType.REQUIRES,
+    'native': TokenType.NATIVE
+}

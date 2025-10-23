@@ -1,6 +1,6 @@
 from .token_type import TokenType
 
-KEYWORDS = {
+KEYWORDS: dict[str, TokenType] = {
     'int': TokenType.INT,
     'long': TokenType.LONG,
     'short': TokenType.SHORT,

@@ -112,9 +112,6 @@ class TokenType(Enum):
   COMMA = re.compile(r',')
   SEMICOLON = re.compile(r';')
   DOT = re.compile(r'\.')
-
-  WHITESPACE = re.compile(r'(\s|\t|\r|\n)+')
-  COMMENT = re.compile(r'(//.*|/\*[\s\S]*?\*/)')
   
   # LITERALS
   IDENTIFIER = re.compile(r'[_a-zA-Z][_a-zA-Z0-9]*')

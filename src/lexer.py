@@ -99,3 +99,24 @@ class Lexer:
 
       return Token(token_type, identifier_str, current_line, current_column)
 
+  def read_string(self) -> Token:
+    current_line = self.line
+    current_column = self.column
+    match = TokenType.STRING.value.match(self.source, self.position)
+
+    if match:
+      string = match.group()
+
+      token_type = TokenType.STRING
+
+      self.position += len(string)
+
+      if self.position < self.length:
+        self.current_char = self.source[self.position]
+      else:
+        self.current_char = None
+
+      self.column += len(string)
+
+      return Token(token_type, string, current_line, current_column)
+

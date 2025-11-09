@@ -84,7 +84,7 @@ class Lexer:
       if '.' in number_str:
         token_type = TokenType.FLOAT
       else:
-        token_type = TokenType.INTEGER
+        token_type = TokenType.INT
 
       self.position += len(number_str)
 

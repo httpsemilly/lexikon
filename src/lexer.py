@@ -1,6 +1,7 @@
 from .token_type import TokenType
 from .token import Token
 from .keywords import KEYWORDS
+import re
 
 OPERATORS_AND_DELIMITERS = [
         TokenType.INCREMENT, TokenType.DECREMENT,

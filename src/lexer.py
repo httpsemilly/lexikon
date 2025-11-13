@@ -81,10 +81,7 @@ class Lexer:
     if match:
       number_str = match.group()
 
-      if '.' in number_str:
-        token_type = TokenType.FLOAT
-      else:
-        token_type = TokenType.INT
+      token_type = TokenType.NUMBER
 
       self.position += len(number_str)
 

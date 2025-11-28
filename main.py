@@ -1,5 +1,6 @@
 from src.lexer import Lexer
 from src.token_type import TokenType
+from src.symbol_table import SymbolTable
 import sys
 
 def main():
@@ -24,6 +25,7 @@ def main():
     print(f"Error creating lexer: {e}")
     return
 
+  symbol_table = SymbolTable()
   tokens = []
   token = None
 
@@ -31,6 +33,9 @@ def main():
     while token is None or token.type != TokenType.EOF:
       token = lexer.next_token()
       tokens.append(token)
+
+      if token.type == TokenType.IDENTIFIER:
+        symbol_table.add(token.lexeme, token.line, token.column)
   except Exception as e:
     print(f"Error during lexical analysis: {e}")
     return
@@ -41,6 +46,8 @@ def main():
       print(f"{token.type.name:15} | {token.lexeme:10} | Line {token.line}, Column {token.column}")
       
   print(f"\nTotal: {len(tokens) - 1} tokens")
+  print("\n")
+  print(symbol_table)
 
 if __name__ == "__main__":
     main()

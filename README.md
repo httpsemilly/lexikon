@@ -32,6 +32,8 @@ lexikon/
 ├── src/
 │ ├── token.py
 │ ├── token_type.py
+│ ├── symbol.py
+│ ├── symbol_table.py
 │ ├── keywords.py
 │ └── lexer.py
 ├── examples/
